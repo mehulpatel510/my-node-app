@@ -75,10 +75,12 @@ http
             response.end();
             break;
         case "/project":
+            response.writeHeader(200, { "Content-Type": "text/html" });
             response.write(projectContent);
             response.end();
             break;
         default:
+            response.writeHeader(200, { "Content-Type": "text/html" });
             response.write(homeContent);
             response.end();
             break;
